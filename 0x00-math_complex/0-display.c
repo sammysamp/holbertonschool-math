@@ -7,11 +7,13 @@
  */
 void display_complex_number(complex c)
 {
+	if (c.re != 0)
+		printf("%.0f ", c.re);
 	if (c.im < 0)
-		printf("%.0f - %.0fi\n", c.re, (-1) * c.im);
+		printf("- %.0fi\n", (-1) * c.im);
 	else
 		if (c.im == 0)
-			printf("%.0f\n", c.re);
+			printf("\n");
 		else
-			printf("%.0f + %.0fi\n", c.re, c.im);
+			printf("+ %.0fi\n", c.im);
 }
