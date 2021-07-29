@@ -15,5 +15,9 @@ void display_complex_number(complex c)
 		if (c.im == 0)
 			printf("\n");
 		else
-			printf("+ %.0fi\n", c.im);
+			if (c.re != 0)
+				printf("+ %.0fi\n", c.im);
+			else
+				printf("%.0fi\n", c.im);
 }
+
