@@ -8,16 +8,16 @@
 void display_complex_number(complex c)
 {
 	if (c.re != 0)
-		printf("%f ", c.re);
+		printf("%.6g ", c.re);
 	if (c.im < 0)
-		printf("- %fi\n", (-1) * c.im);
+		printf("- %.6gi\n", (-1) * c.im);
 	else
 		if (c.im == 0)
 			printf("\n");
 		else
 			if (c.re != 0)
-				printf("+ %fi\n", c.im);
+				printf("+ %.6gi\n", c.im);
 			else
-				printf("%fi\n", c.im);
+				printf("%.6gi\n", c.im);
 }
 
