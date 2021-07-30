@@ -10,7 +10,10 @@ void display_complex_number(complex c)
 	if (c.re != 0)
 		printf("%.16g ", c.re);
 	if (c.im < 0)
-		printf("- %.16gi\n", (-1) * c.im);
+		if (c.re != 0)
+			printf("- %.16gi\n", (-1) * c.im);
+		else
+			printf("%.16gi\n", c.im);
 	else
 		if (c.im == 0)
 			printf("\n");
