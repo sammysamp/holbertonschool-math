@@ -10,8 +10,9 @@
 void display_complex_number(complex c)
 {
 	if (c.re == '\0')
-		if (c.im == '\0')
-			return;
+		c.re = 0;
+	if (c.im == '\0')
+		c.im = 0;
 	if (c.re < DBL_MAX && c.im < DBL_MAX)
 	{
 		if (c.re != 0)
