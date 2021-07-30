@@ -19,7 +19,10 @@ void display_complex_number(complex c)
 			printf("%g ", c.re);
 		if (c.im < 0)
 			if (c.re != 0)
-				printf("- %gi\n", (-1) * c.im);
+				if (c.im == -1)
+					printf("- i\n");
+				else
+					printf("- %gi\n", (-1) * c.im);
 			else
 				printf("%gi\n", c.im);
 		else
@@ -30,9 +33,15 @@ void display_complex_number(complex c)
 					printf("0\n");
 			else
 				if (c.re != 0)
-					printf("+ %gi\n", c.im);
+					if (c.im == 1)
+						printf("+ i\n");
+					else		
+						printf("+ %gi\n", c.im);
 				else
-					printf("%gi\n", c.im);
+					if (c.im == 1)
+						printf("i");
+					else
+						printf("%gi\n", c.im);
 	}
 }
 
